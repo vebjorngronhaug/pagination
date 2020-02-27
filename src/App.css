@@ -1,38 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
 .App {
-  text-align: center;
+    text-align: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg,#4158d0,#c850c0);
+    font-family: 'Open Sans', Helvetica, Verdana, Geneva, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    margin: 0 auto;
+    width: 1400px;
+    max-width: 95%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* pagination buttons */
+.button-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button {
+    background-color: #36304a;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 4px;
+    cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover, :focus {
+    background-color: #e7e7e7;
+    color: black;
+    text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+    margin: 0px;
+    padding: 40px 0px;
+    color: white;
+}
+
+/* repository link */
+.link {
+    display: inline-block;
+    font-weight: 600;
+    color: blue;
+}
+
+.link:hover, :focus {
+    color: red;
+}
+
+/* avatar images */
+.avatar-desktop {
+    width: 30px;
+}
+
+.avatar-mobile {
+    position: absolute;
+    right: 0;
+    margin: 10px 5% 0px 0px;
+    width: 70px;
+}
+
+/* table view on desktop */
+table {
+    border-radius: 10px;
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    color: black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+tr:hover > td {
+    background-color: #d8d8d8;
+}
+
+th {
+    background-color: #36304a;
+    color: white;
+    height: 60px;
+}
+
+tr {
+    height: 50px;
+    background-color: #ffffff;
+}
+
+tr:nth-child(even){
+    background-color: #f5f5f5;
+}
+
+/* view on mobile devices */
+.box {
+    text-align: left;
+    background-color: #ffffff;
+}
+
+.box:nth-child(even){
+    background-color: #f5f5f5;
+}
+
+.box:hover {
+    background-color: #d8d8d8;
+}
+
+.box:first-of-type {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.box:last-of-type {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.items {
+    padding: 10px;
+    width: 100%;
+}
+
+.title {
+    font-weight: 600;
 }
